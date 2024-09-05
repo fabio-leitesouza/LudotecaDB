@@ -11,6 +11,7 @@ CREATE TABLE Jogos (
 (Estoque >= 0) -- Quantidade em estoque, padrão é 0 e não pode ser negativo
 );
 
+-- Compare this snippet from queriesScripts.sql:
 INSERT INTO Jogos
     (Nome_Jogo, Categoria, Ano_Lancamento, Preco, Estoque)
 VALUES
@@ -44,6 +45,30 @@ VALUES
     ('Agricola', 'Estratégia', 2007, 280.00, 5),
     ('Concordia', 'Estratégia', 2013, 220.00, 6),
     ('Quacks of Quedlinburg', 'Familiar', 2018, 180.00, 9);
+
+CREATE TABLE Clientes (
+    ID_Cliente INTEGER PRIMARY KEY AUTOINCREMENT, -- Chave primária com auto-incremento
+    Nome_Cliente TEXT NOT NULL, -- Nome do cliente, obrigatório
+    Email TEXT NOT NULL UNIQUE, -- Email do cliente, obrigatório e único
+    Telefone TEXT, -- Telefone opcional
+    Endereco TEXT NOT NULL, -- Endereço do cliente, obrigatório
+    Data_Cadastro DATE DEFAULT (date('now')), -- Data de cadastro com valor padrão para a data atual
+    Status_Ativo BOOLEAN DEFAULT 1 -- Indica se o cliente está ativo (1 = ativo, 0 = inativo)
+);
+
+INSERT INTO Clientes (Nome_Cliente, Email, Telefone, Endereco)
+VALUES
+('João Silva', 'joao.silva@email.com', '(11) 98765-4321', 'Rua das Flores, 123, São Paulo, SP'),
+('Maria Oliveira', 'maria.oliveira@email.com', '(21) 99876-5432', 'Avenida Brasil, 456, Rio de Janeiro, RJ'),
+('Pedro Souza', 'pedro.souza@email.com', '(31) 91234-5678', 'Rua dos Pinheiros, 789, Belo Horizonte, MG'),
+('Ana Pereira', 'ana.pereira@email.com', '(41) 92345-6789', 'Avenida Central, 321, Curitiba, PR'),
+('Lucas Lima', 'lucas.lima@email.com', '(51) 93456-7890', 'Rua do Porto, 654, Porto Alegre, RS'),
+('Carla Mendes', 'carla.mendes@email.com', '(61) 94567-8901', 'Quadra 5, Bloco A, Brasília, DF'),
+('Felipe Costa', 'felipe.costa@email.com', '(71) 95678-9012', 'Rua do Comércio, 111, Salvador, BA'),
+('Beatriz Almeida', 'beatriz.almeida@email.com', '(81) 96789-0123', 'Rua da Praia, 222, Recife, PE'),
+('Rafael Gonçalves', 'rafael.goncalves@email.com', '(91) 97890-1234', 'Avenida das Palmeiras, 333, Belém, PA'),
+('Julia Ramos', 'julia.ramos@email.com', '(31) 98901-2345', 'Rua do Sol, 444, Belo Horizonte, MG');
+
 
 
 

@@ -1,1 +1,1 @@
-SELECT * FROM Jogos;
+SELECT * FROM Clientes;
