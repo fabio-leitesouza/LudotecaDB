@@ -1,14 +1,11 @@
-CREATE TABLE Jogos (
-    ID_Jogo INTEGER PRIMARY KEY AUTOINCREMENT, -- Auto-incremento para garantir chave única
-    Nome_Jogo TEXT NOT NULL, -- Nome do jogo, obrigatório
-    Categoria TEXT NOT NULL, -- Categoria do jogo, obrigatório
-    Ano_Lancamento INTEGER CHECK
-(Ano_Lancamento > 1900 AND Ano_Lancamento <= strftime
-('%Y','now')), -- Ano deve ser válido e não no futuro
-    Preco REAL CHECK
-(Preco >= 0), -- Preço deve ser um valor positivo
-    Estoque INTEGER DEFAULT 0 CHECK
-(Estoque >= 0) -- Quantidade em estoque, padrão é 0 e não pode ser negativo
+CREATE TABLE Games (
+    GameID INTEGER PRIMARY KEY AUTOINCREMENT,       -- Chave primária com auto-incremento
+    GameName TEXT NOT NULL,                         -- Nome do jogo, obrigatório
+    Category TEXT NOT NULL,                         -- Categoria do jogo, obrigatório
+    ReleaseYear INTEGER CHECK (ReleaseYear > 1900 
+                               AND ReleaseYear <= strftime('%Y', 'now')),  -- Ano válido (não no futuro)
+    Price REAL CHECK (Price >= 0),                  -- Preço deve ser positivo
+    Stock INTEGER DEFAULT 0 CHECK (Stock >= 0)      -- Estoque padrão é 0 e não pode ser negativo
 );
 
 -- Compare this snippet from queriesScripts.sql:
