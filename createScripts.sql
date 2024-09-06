@@ -69,6 +69,15 @@ VALUES
 ('Rafael Gonçalves', 'rafael.goncalves@email.com', '(91) 97890-1234', 'Avenida das Palmeiras, 333, Belém, PA'),
 ('Julia Ramos', 'julia.ramos@email.com', '(31) 98901-2345', 'Rua do Sol, 444, Belo Horizonte, MG');
 
+CREATE TABLE Colaboradores (
+    ColaboradorID INTEGER PRIMARY KEY AUTOINCREMENT, -- Chave primária com auto-incremento
+    NomeColaborador TEXT NOT NULL, -- Nome do colaborador, obrigatório
+    Email TEXT NOT NULL DEFAULT 'sem email', -- Email do colaborador, padrão é 'sem email'
+    Telefone TEXT, -- Telefone opcional
+    Cargo TEXT NOT NULL, -- Cargo do colaborador, obrigatório
+    DataContratacao DATE DEFAULT (date('now')), -- Data de contratação, padrão é a data atual
+    Ativo BOOLEAN DEFAULT 1 -- Indica se o colaborador está ativo (1 = ativo, 0 = inativo)
+);
 
 
 
