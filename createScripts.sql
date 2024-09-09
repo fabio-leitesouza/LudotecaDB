@@ -130,6 +130,48 @@ VALUES
 (5, 1, 4, date('2024-09-05'), NULL); -- Lucas Lima alugou o jogo com ID 4, registrado por João Silva, com data de entrada em 05/09/2024 e ainda não devolvido
 
 
+INSERT INTO Clientes (NomeCliente, Email, Telefone, Rua, Bairro, Cidade, Estado)
+VALUES 
+('Gabriel Souza', 'gabriel.souza@email.com', '(21) 91234-1111', 'Rua do Comércio', 'Centro', 'Rio de Janeiro', 'RJ'),
+('Larissa Albuquerque', 'larissa.albuquerque@email.com', '(27) 92234-2222', 'Avenida Central', 'Praia do Canto', 'Vitória', 'ES'),
+('Vinícius Ferreira', 'vinicius.ferreira@email.com', '(65) 93444-3333', 'Rua Amazonas', 'Centro Sul', 'Cuiabá', 'MT'),
+('Sabrina Silva', 'sabrina.silva@email.com', '(16) 94567-4444', 'Avenida Brasil', 'Vila Nova', 'Ribeirão Preto', 'SP'),
+('Tiago Barbosa', 'tiago.barbosa@email.com', '(62) 95678-5555', 'Rua 10', 'Setor Oeste', 'Goiânia', 'GO'),
+('Natália Castro', 'natalia.castro@email.com', '(79) 96789-6666', 'Rua Ivo do Prado', 'Atalaia', 'Aracaju', 'SE'),
+('Lucas Mendes', 'lucas.mendes@email.com', '(84) 97890-7777', 'Rua Potengi', 'Tirol', 'Natal', 'RN'),
+('Aline Ramos', 'aline.ramos@email.com', '(95) 98901-8888', 'Avenida São Sebastião', 'Centro', 'Boa Vista', 'RR'),
+('Fábio Almeida', 'fabio.almeida@email.com', '(92) 93456-9999', 'Rua dos Andradas', 'Adrianópolis', 'Manaus', 'AM'),
+('Renata Moreira', 'renata.moreira@email.com', '(67) 94567-0000', 'Avenida Afonso Pena', 'Amambaí', 'Campo Grande', 'MS');
+
+INSERT INTO Aluguel (ClienteID, ColaboradorID, JogoID, DataEntrada, DataEntrega)
+VALUES
+(1, 2, 3, '2024-08-01', '2024-08-07'),
+(2, 3, 5, '2024-08-01', '2024-08-10'),
+(3, 2, 7, '2024-08-03', '2024-08-12'),
+(4, 1, 2, '2024-08-05', '2024-08-15'),
+(5, 4, 8, '2024-08-05', '2024-08-14'),
+(6, 5, 6, '2024-08-10', '2024-08-17'),
+(7, 1, 1, '2024-08-12', '2024-08-19'),
+(8, 3, 4, '2024-08-12', '2024-08-20'),
+(9, 2, 9, '2024-08-14', '2024-08-21'),
+(10, 4, 3, '2024-08-15', '2024-08-22'),
+(1, 3, 5, '2024-08-17', '2024-08-24'),
+(2, 5, 7, '2024-08-17', '2024-08-25'),
+(3, 2, 6, '2024-08-20', '2024-08-27'),
+(4, 1, 8, '2024-08-22', '2024-08-29'),
+(5, 3, 2, '2024-08-24', '2024-09-01'),
+(6, 2, 4, '2024-08-26', '2024-09-03'),
+(7, 4, 1, '2024-08-28', '2024-09-05'),
+(8, 5, 9, '2024-08-29', '2024-09-07'),
+(9, 1, 3, '2024-08-31', '2024-09-08'),
+(10, 2, 7, '2024-09-01', '2024-09-10'),
+(1, 3, 6, '2024-09-01', '2024-09-09'),
+(2, 4, 5, '2024-09-03', '2024-09-12'),
+(3, 5, 2, '2024-09-04', '2024-09-13'),
+(4, 2, 8, '2024-09-05', '2024-09-14');
+
+
+
 
 
 
