@@ -1,7 +1,4 @@
 
-
-
-
 SELECT Clientes.NomeCliente, Aluguel.AluguelID, Aluguel.DataEntrada
 FROM Clientes
     INNER JOIN Aluguel
